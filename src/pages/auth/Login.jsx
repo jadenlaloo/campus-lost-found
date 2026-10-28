@@ -43,12 +43,6 @@ export default function Login() {
     }
   };
 
-  const handleDemoFill = (demoEmail, demoPassword) => {
-    setEmail(demoEmail);
-    setPassword(demoPassword);
-    setError('');
-  };
-
   return (
     <div className="main-column d-flex align-items-center justify-content-center py-4">
       <div className="w-100" style={{ maxWidth: '440px' }}>
@@ -98,27 +92,6 @@ export default function Login() {
                 {submitting ? 'Signing in...' : 'Sign In to Portal'}
               </button>
             </form>
-
-            {/* Quick Demo Test Buttons */}
-            <div className="pt-3 border-top border-dark text-center">
-              <span className="small text-muted font-monospace d-block mb-2">Test account autofill:</span>
-              <div className="d-flex justify-content-center gap-2">
-                <button
-                  type="button"
-                  className="btn btn-sm btn-outline-dark"
-                  onClick={() => handleDemoFill('admin@campus.edu', 'Admin@123')}
-                >
-                  Admin
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-sm btn-outline-dark"
-                  onClick={() => handleDemoFill('alice@campus.edu', 'Student@123')}
-                >
-                  Student (Alice)
-                </button>
-              </div>
-            </div>
 
             <div className="text-center mt-3 small">
               <span className="text-muted">Need an account? </span>
